@@ -56,10 +56,12 @@ jobs:
     - name: Push site build
       run: |
         cd public
+        git config --global user.email "connect@amorpheuz.dev"
+        git config --global user.name "Amorpheuz"
         git init
         git add -A
         git commit -m "built with $GITHUB_SHA"
         git push https://$USERNAME:$REPO_TOKEN@github.com/Amorpheuz/gatsby-conditional-builds-demo.git
       env:
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        USERNAME: Gatsby Conditional Build
+        USERNAME: Amorpheuz
