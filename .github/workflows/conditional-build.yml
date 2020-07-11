@@ -61,7 +61,7 @@ jobs:
         git init
         git add -A
         git commit -m "built with $GITHUB_SHA"
-        git push https://$USERNAME:$REPO_TOKEN@github.com/Amorpheuz/gatsby-conditional-builds-demo.git
+        git push --force https://$USERNAME:$REPO_TOKEN@github.com/Amorpheuz/gatsby-conditional-builds-demo.git master
       env:
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         USERNAME: Amorpheuz
