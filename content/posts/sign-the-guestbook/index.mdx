@@ -1,0 +1,57 @@
+---
+title: How to Sign the Guestbook?
+date: 2020-07-12
+---
+
+Before we begin, copy the template from the following code block:
+
+```markdown
+---
+title: your name
+date: yyyy-mm-dd
+image: https://placekitten.com/400/300 #optional
+imageAlt: A cute cat #optional, mandatory if you add an image
+---
+
+Replace this piece of text with your cool quote 😎, words of wisdom 
+🧙🏽‍♂️ or even a simple Hi!👋... Anything that isn't offensive / NSFW!
+
+## [optional] Gif that describes you right now
+![gif_alt_text](gif_link) <!-- optional -->
+
+```
+
+Let's get started:
+
+1. Head over to the [Posts folder in the GitHub Repo](https://github.com/Amorpheuz/gatsby-conditional-builds-demo/tree/dev/content/posts). 
+Click on `Add File 🔽` button on top right, then on `Create new file`. You should see the screen in the following picture, if you are logged 
+into GitHub account with the account email verified.
+
+2. Create a file with `your-name.mdx` format, e.g. `john-doe.mdx`. Feel free to mix it up with numbers if your name is already taken.
+
+3. Paste the template, and fill in the info. Be sure to remove lines marked as `optional` if you don't feel like filling those up!
+
+4. You should see a screen similar to this now, with your content instead of the template:
+
+  ![Image of github new file view](./github-new-file.png)
+
+5. Scroll down, and click on the green `Propose new file` button. The browser will load a page titled `Comparing changes`.
+
+6. Click on the green `Create pull request` button. 
+
+7. Next, change the title which says `Create your-name.mdx` to your `Add your-name`.
+  E.g., `Create john-doe.mdx` gets changed to `Add John Doe`.
+
+8. Scroll down and review the changes for one final time. Once done, click on the green `Create pull request` button.
+
+9. Your pull request will be created, and you should see a GitHub action getting triggered. Click on the blue `Details` to the right
+  to preview the GitHub Action in action!
+
+  ![GitHub action running its checks](./github-action-running.png)
+
+10. If everything was done correctly, the Action will complete with a green ✅ next to it.
+
+Congratulations 🎉🎉! Your signing was successful, I will be reviewing your Pull Request and once all looks good, I will approve it 
+making your entry live on the website. 
+
+Thank you for signing! ❤
