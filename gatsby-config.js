@@ -11,13 +11,14 @@ module.exports = {
     title: `Amorph's Guestbook`,
     author: `Yash Dave`,
     description: `A guestbook for folks visiting the website! Built to demonstrate Gatsby Conditional Builds`,
+    siteUrl:"https://guestbook.amorpheuz.dev/",
     social: [
       {
         name: `Twitter`,
         url: `https://twitter.com/amorpheuz`,
       },
       {
-        name: `Github`,
+        name: `GitHub`,
         url: `https://github.com/amorpheuz`,
       },
     ],
