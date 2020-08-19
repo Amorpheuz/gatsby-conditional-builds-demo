@@ -19,7 +19,7 @@ jobs:
     steps:
     - name: get a dad-joke
       run: |
-        echo "::set-env name=TEMP::$(curl -H "Accept: text/plain" https://icanhazdadjoke.com/j/KmW8hFlV0ob | tr \n <br/>)"
+        echo "::set-env name=TEMP::$(curl -H "Accept: application/json" 'https://icanhazdadjoke.com/j/KmW8hFlV0ob' | python3 -c "import sys, json; print(json.load(sys.stdin)['joke'])" | sed -r 's/[\r\n]+/<br>/g')"
     
     - name: escape double-quotes
       run: |
