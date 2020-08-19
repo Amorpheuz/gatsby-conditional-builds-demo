@@ -23,7 +23,7 @@ jobs:
     
     - name: escape double-quotes
       run: |
-        echo "::set-env name=DAD_JOKE::echo "$TEMP" | tr \" \'"
+        echo "::set-env name=DAD_JOKE::$(echo "$TEMP" | tr \" \')"
 
     # Runs a single command using the runners shell
     - name: create commit comment
