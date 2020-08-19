@@ -19,8 +19,7 @@ jobs:
     steps:
     - name: get a dad-joke
       run: |
-        echo "::set-env name=TEMP::$(curl -H "Accept: text/plain" https://icanhazdadjoke.com/)"
-        echo "::set-env name=DAD_JOKE::$(echo "$TEMP" | tr \" \')"
+        echo "::set-env name=DAD_JOKE::$(curl -H "Accept: text/plain" https://icanhazdadjoke.com/)"
 
     # Runs a single command using the runners shell
     - name: create commit comment
@@ -30,4 +29,4 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
         $GITHUB_API_URL/repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/comments \
-        -d "{\"body\":\"| ![Commiticon](https://avatars.dicebear.com/api/human/$GITHUB_SHA.svg?h=250) | $DAD_JOKE |\n|:-:|:-:|\"}"
+        -d "{\"body\":\"| ![Commiticon](https://avatars.dicebear.com/api/human/$GITHUB_SHA.svg?h=250) | $(echo \\\"$DAD_JOKE\\\" | tr \\\" ') |\n|:-:|:-:|\"}"
