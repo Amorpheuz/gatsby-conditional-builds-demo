@@ -29,4 +29,4 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
         $GITHUB_API_URL/repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/comments \
-        -d "{\"body\":\"<img src='https://avatars.dicebear.com/api/human/$GITHUB_SHA.svg?h=250'/><br/><p>$DAD_JOKE</p>\"}"
+        -d "{\"body\":\"| ![Commiticon](https://avatars.dicebear.com/api/human/$GITHUB_SHA.svg?h=250) | $DAD_JOKE |\n|:-:|:-:|\"}"
