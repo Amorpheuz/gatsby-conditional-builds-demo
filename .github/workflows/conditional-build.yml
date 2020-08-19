@@ -48,9 +48,11 @@ jobs:
     
     # Build Gatsby Site
     - name: Build Gatsby site
-      run: npm run build:conditional
       env: 
         GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+      run: |
+        echo $GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES
+        npm run build:conditional
     
     # Push changes to master branch
     - name: Push site build
