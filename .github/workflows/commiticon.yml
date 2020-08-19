@@ -19,7 +19,7 @@ jobs:
     steps:
     - name: get a dad-joke
       run: |
-        DAD_JOKE=$(curl -H "Accept: text/plain" https://icanhazdadjoke.com/)
+        echo "::set-env name=DAD_JOKE::$(curl -H "Accept: text/plain" https://icanhazdadjoke.com/)"
 
     # Runs a single command using the runners shell
     - name: create commit comment
